@@ -208,9 +208,11 @@ p {
 }
 
 .business_card {
+  position: relative;
   margin-top: 60px;
 }
 .business_card img {
+  position: relative;
   width: 100%;
 }
 

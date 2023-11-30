@@ -251,12 +251,16 @@ p{
 }
 
 .business_card{
+    position: relative;
     margin-top: 60px;
 
     img{
+        position: relative;
         width: 100%;
     }
 }
+
+
 
 
 @media(min-width: 768px) {
