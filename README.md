@@ -1,1 +1,0 @@
-# Kochana_Rzadzisz
