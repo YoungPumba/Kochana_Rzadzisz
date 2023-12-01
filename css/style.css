@@ -12,14 +12,6 @@ body {
   background-color: #F9F5F2;
 }
 
-h2 {
-  font-family: "Cinzel", serif;
-  font-weight: bold;
-  font-size: 1.6rem;
-  color: black;
-  text-decoration: underline;
-}
-
 .burger-btn {
   position: fixed;
   top: 20px;
@@ -153,6 +145,20 @@ h1 {
   margin: 50px 0;
 }
 
+h2 {
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: black;
+  text-decoration: underline;
+}
+
+h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
 figure {
   height: 286px;
 }
@@ -208,12 +214,41 @@ p {
 }
 
 .business_card {
+  display: grid;
   position: relative;
   margin-top: 60px;
 }
-.business_card img {
+.business_card h3 {
+  font-size: 4vw;
+  margin: 6vw 0;
+}
+.business_card p {
+  font-size: 3.6vw;
+  margin: 6vw 0;
+}
+.business_card__btn {
   position: relative;
+  font-family: "Abhaya Libre", serif;
+  font-size: 3.6vw;
+  height: 7vw;
+  width: 58vw;
+  border-radius: 5vw;
+  border: none;
+  color: white;
+  background-color: #FF31A6;
+}
+.business_card img {
+  position: absolute;
   width: 100%;
+}
+.business_card mark {
+  background-color: #FF31A6;
+}
+
+.text {
+  margin-left: 40%;
+  display: inline;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -228,6 +263,28 @@ p {
     left: 50px;
     width: 406px;
     height: 101px;
+  }
+  .business_card h3 {
+    width: 70%;
+    font-size: 3vw;
+    margin-top: 3vw;
+    margin-bottom: 0;
+  }
+  .business_card p {
+    font-size: 2.5vw;
+    margin: 2vw 0;
+  }
+  .business_card__btn {
+    font-size: 2vw;
+    height: 4vw;
+    width: 34vw;
+    border-radius: 2.7vw;
+    margin-top: 2vw;
+  }
+  .business_card img {
+    content: url("/assets/STRONA KLAUDII/background.png");
+    position: absolute;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
