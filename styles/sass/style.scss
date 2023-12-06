@@ -175,6 +175,14 @@ body {
         clip-path: polygon(0% 100%, 100% 0%, 0% 0%);
         background-color: pink;
     }
+
+    .triangle_reversed{
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background-color: pink;
+    }
 }
 
 .flex-container{
@@ -316,6 +324,7 @@ p{
 }
 
 .bricks{
+    // position: absolute;
     display: grid;
     justify-content: center;
     text-align: center;
@@ -330,7 +339,7 @@ p{
         margin: 0 auto;
         width: 47vw;
         height: 33vw;
-        background-image: url('/assets/STRONA KLAUDII/2.png');
+        background-image: url('../assets/STRONA KLAUDII/2.png');
         background-size: cover;
 
         a{
@@ -393,7 +402,7 @@ p{
         }
 
         img{
-            content: url('/assets/STRONA KLAUDII/background.png');
+            content: url('../assets/STRONA KLAUDII/background.png');
             position: absolute;
             width: 100%;
         }
@@ -526,7 +535,7 @@ p{
     }
 
     .business_background{
-        background-image: url('/assets/STRONA KLAUDII/business_background.png');
+        background-image: url('../assets/STRONA KLAUDII/business_background.png');
         background-size: cover;
         background-color: #FAB8C4;
         height: 544.05px;
