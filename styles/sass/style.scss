@@ -165,8 +165,6 @@ body {
 }
 
 .background {
-    position: relative;
-    width: 100%;
 
     .triangle {
         width: 100%;
@@ -288,6 +286,7 @@ p{
     p{
         font-size: 3.6vw;
         margin: 6vw 0;
+        width: 55vw;
     }
 
     a{
@@ -300,7 +299,7 @@ p{
         font-family: 'Abhaya Libre', serif;;
         font-size: 3.6vw;
         height: 7vw;
-        width: 58vw;
+        width: 57vw;
         border-radius: 5vw;
         border: none;
         color: white;
@@ -324,21 +323,20 @@ p{
 }
 
 .bricks{
-    // position: absolute;
     display: grid;
     justify-content: center;
     text-align: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-gap: 2vw;
-    margin: 20vw 5px 50px 5px;
+    margin: 20vw 5px 0px 5px;
 
     .brick{
         display: flex;
         line-height: 5vw;
         margin: 0 auto;
-        width: 47vw;
-        height: 33vw;
+        width: 46vw;
+        height: 32vw;
         background-image: url('../assets/STRONA KLAUDII/2.png');
         background-size: cover;
 
@@ -358,7 +356,28 @@ p{
         grid-column: 1 / span 2;
 
         img{
-            width: 97vw;
+            width: 94vw;
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+
+    .logo {
+        top: 0px;
+        margin-bottom: 0px;
+        width: auto;
+
+        img {
+            width: 300px;
+            height: 75px;
+            margin-right: 0px;
+            left: 0px;
         }
     }
 }
@@ -390,7 +409,8 @@ p{
 
         p{
             font-size: 2.5vw;
-            margin: 2vw 0;
+            margin: 1.5vw 0;
+            width: 54vw;
         }
 
         &__btn{
@@ -398,7 +418,7 @@ p{
             height: 4vw;
             width: 34vw;
             border-radius: 2.7vw;
-            margin-top: 2vw;
+            margin-top: 1vw;
         }
 
         img{
@@ -450,6 +470,10 @@ p{
     .background {
         .triangle{
             height: 800px;
+        }
+
+        .triangle_reversed{
+            height: 400px;
         }
     }
     h1 {
@@ -512,20 +536,19 @@ p{
 
         h3{
             font-size: 2rem;
-            margin-top: 20px;
+            margin-top: 10px;
             margin-bottom: 0;
         }
 
         p{
-            width: 91%;
+            width: 89%;
             font-size: 1.6rem;
-            margin: 20px 0;
+            margin: 10px 0;
         }
 
         &__btn{
             width: 400px;
             height: 45px;
-            margin-top: 0px;
             font-family: 'Abhaya Libre', serif;;
             font-size: 1.6rem;
             border-radius: 12px;
@@ -540,6 +563,51 @@ p{
         background-color: #FAB8C4;
         height: 544.05px;
     }
+
+    .bricks{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 6vw;
+
+        .brick{
+            line-height: normal;
+            width: 265px;
+            height: 189px;
+
+            a{
+                font-size: 1.6rem;
+            }
+        }
+
+        .banner{
+            grid-column: 1 / span 3;
+    
+            img{
+                max-width: 1400px;
+            }
+        }
+    }
+
+    .footer{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 250px;
+
+        .logo {
+            top: 0px;
+            margin-bottom: 0px;
+            width: auto;
+
+            img {
+                width: 380px;
+                height: 95px;
+                margin-right: 0px;
+                left: 0px;
+            }
+        }
+    }
 }
 
 @media(min-width:1170px){
@@ -552,16 +620,31 @@ p{
         }
 
         p{
-            width: 85%;
+            width: 79%;
         }
 
         &__btn{
-            margin-top: 60px;
+            margin-top: 30px;
         }
     }
 
     .business_background{
         height: 641.67px;
+    }
+
+    .bricks{
+
+        .brick{
+            width: 298px;
+            height: 213px;
+
+            a{
+                width: 298px;
+                padding: 12% 12%;
+            }
+        }
+
+
     }
 }
 
@@ -575,7 +658,8 @@ p{
         }
 
         p{
-            width: 80%;
+            width: 81%;
+            margin-top: 60px;
         }
 
         &__btn{
@@ -585,5 +669,16 @@ p{
 
     .business_background{
         height: 767.81px;
+    }
+    .bricks{
+
+        .brick{
+            width: 340px;
+            height: 243px;
+
+            a{
+                width: 340px;
+            }
+        }
     }
 }
