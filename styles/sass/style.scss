@@ -67,31 +67,31 @@ body {
     }
 }
 
-// .btn-special-animation {
-//     position: relative;
-//     transition: background-color .3s;
-//     overflow: hidden;
-//     z-index: 0;
+.btn-special-animation {
+    position: relative;
+    transition: background-color .3s;
+    overflow: hidden;
+    z-index: 0;
 
-//     &::before {
-//         display: block;
-//         content: '';
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         transform: scaleX(0);
-//         transform-origin: right;
-//         transition: transform .3s;
-//         z-index: -1;
-//     }
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s;
+        z-index: -1;
+    }
 
-//     &:hover::before{
-//         transform: scaleX(1);
-//         transform-origin: left;
-//     }
-// }
+    &:hover::before{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
 
 .navbar-mobile {
     position: fixed;
@@ -102,8 +102,13 @@ body {
     height: 100vh;
     width: 100%;
     transform: translateX(100%);
+    transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
     background-color: pink;
     z-index: 100;
+
+    &--active{
+        transform: translateX(0);
+    }
 
     &__link {
         position: relative;
@@ -112,21 +117,22 @@ body {
         padding: 0.5em 2em;
         font-size: 1.6rem;
         text-decoration: none;
-    }
 
-    &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 3px;
-        height: 100%;
-        transform: scaleY(0);
-        transition: transform .3s;
-        content: '';
-    }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            transform: scaleY(0);
+            background-color: black;
+            transition: transform .3s;
+            content: '';
+        }
 
-    &:hover::before {
-        transform: scaleY(1);
+        &:hover::before {
+            transform: scaleY(1);
+        }
     }
 }
 
@@ -246,6 +252,7 @@ p{
         font-size: 1.1rem;
         border-radius: 12px;
         border: none;
+        text-decoration: none;
         color: white;
         background-color: #FF31A6
     }
