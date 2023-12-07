@@ -394,11 +394,31 @@ p{
             left: 0px;
         }
     }
-    // /////////////////////// //
-    // /////////Koniec//////// //
-    // ////////Kochana//////// //
-    // ///////Rządzisz//////// //
-    // /////////////////////// //
+}
+// /////////////////////// //
+// /////////Koniec//////// //
+// ////////Kochana//////// //
+// ///////Rządzisz//////// //
+// /////////////////////// //
+
+.remont{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    p{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Cinzel', serif;
+    }
+
+    img{
+        border: black solid;
+        position: absolute;
+        box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    }
 }
 
 // /////////////////////// //

@@ -322,6 +322,24 @@ p {
   left: 0px;
 }
 
+.remont {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.remont p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Cinzel", serif;
+}
+.remont img {
+  border: black solid;
+  position: absolute;
+  box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
+}
+
 @media (min-width: 768px) {
   .burger-btn {
     top: 40px;
