@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Cinzel:wght@400;700;900&display=swap");
+body {
+  background-color: pink;
+}
+
+.logo {
+  margin-bottom: 80px;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: 36px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+p {
+  text-align: center;
+  margin: 0 24px;
+}
+
+ul {
+  list-style: circle;
+  margin: 0 24px;
+}
+ul li {
+  font-family: "Abhaya Libre", serif;
+  font-size: 1.1rem;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  padding: 30px 0;
+  border: 2px #FF31A6 solid;
+  background-color: #F9F5F2;
+  box-shadow: 0px 11px 10px -10px rgb(66, 68, 90);
+}
+
+.project-desktop {
+  display: none;
+}
+
+.email {
+  border: 2px black solid;
+  border-radius: 50px;
+  text-align: center;
+  margin: 0px 5px 50px;
+}
+.email p {
+  font-family: "Cinzel", serif;
+  font-size: 1.05rem;
+  margin: 15px 5px;
+}
+
+.footer {
+  top: 0px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .project {
+    display: none;
+  }
+  .email {
+    display: none;
+  }
+  .project-desktop {
+    display: block;
+    justify-content: center;
+    margin: 30px 30px;
+    padding: 30px 0;
+    border: 2px #FF31A6 solid;
+    background-color: #F9F5F2;
+    box-shadow: 0px 11px 10px -10px rgb(66, 68, 90);
+  }
+  .project-desktop h1 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .project-desktop ul {
+    margin: 50px 50px;
+  }
+  .project-desktop ul li {
+    font-size: 1.6rem;
+  }
+  .email-desktop {
+    border: 2px black solid;
+    border-radius: 50px;
+    text-align: center;
+    margin: 50px 15% 30px 15%;
+  }
+  .email-desktop p {
+    font-family: "Cinzel", serif;
+    font-size: 1.6rem;
+    margin: 15px 5px;
+  }
+}/*# sourceMappingURL=opro.css.map */
