@@ -232,11 +232,11 @@ p {
 }
 .business_card h3 {
   font-size: 4vw;
-  margin: 6vw 0;
+  margin: 3vw 0;
 }
 .business_card p {
   font-size: 3.6vw;
-  margin: 6vw 0;
+  margin: 3vw 0;
   width: 55vw;
 }
 .business_card a {
@@ -357,6 +357,9 @@ p {
     content: url("../assets/STRONA KLAUDII/background.png");
     position: absolute;
     width: 100%;
+  }
+  .bricks {
+    margin: 10vw 5px 0px 5px;
   }
 }
 @media (min-width: 992px) {
