@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Cinzel:wght@400;700;900&display=swap');
+
+.hello {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15vw;
+    text-align: center;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.quotations {
+    flex-direction: column;
+    align-items: center;
+    .quote {
+        text-align: center;
+        min-width: 260px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0px 30px;
+        width: 100%;
+
+            p {
+                font-size: 14px;
+                padding: 5px 0;
+            }
+            blockquote {
+                font-size: 17px;
+            }
+
+        .top-quote {
+            font-family: 'Cinzel', serif;
+            border-top: solid 2px black;
+            border-left: solid 2px black;
+            border-right: solid 2px black;
+            padding: 10px 5px;
+        }
+
+        .author__1 {
+            background-color: #F14E87;
+        }
+
+        .author__2 {
+            background-color: #FAB8C4;
+        }
+
+        .author__3 {
+            background-color: #B23460;
+        }
+
+        .author__4 {
+            background-color: #FF075E;
+        }
+    }
+}
