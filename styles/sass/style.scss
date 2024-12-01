@@ -136,6 +136,20 @@ body {
             transform: scaleY(1);
         }
     }
+    &__links-mini{
+        display: flex;
+        justify-content: center;
+        margin:-30px 0 30px 0;
+        ul{
+            list-style-type: none;
+            a{
+                font-family: 'Cinzel', serif;
+                font-size: 1rem;
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 .navbar-desktop{
@@ -208,7 +222,6 @@ h2 {
     font-weight: bold;
     font-size: 1.6rem;
     color: black;
-    text-decoration: underline; 
 }
 
 h3{
@@ -343,12 +356,13 @@ p{
     justify-content: center;
     text-align: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
     grid-gap: 2vw;
     margin: 20vw 5px 0px 5px;
 
     .brick{
         display: flex;
+        justify-content: center;
         line-height: 5vw;
         margin: 0 auto;
         width: 46vw;
@@ -624,7 +638,7 @@ p{
     }
 
     .bricks{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
         grid-gap: 6vw;
 
@@ -634,12 +648,13 @@ p{
             height: 189px;
 
             a{
+                justify-content: center;
                 font-size: 1.6rem;
             }
         }
 
         .banner{
-            grid-column: 1 / span 3;
+            grid-column: 1 / span 2;
     
             img{
                 max-width: 1400px;

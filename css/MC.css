@@ -53,4 +53,21 @@ h1 {
 }
 .quotations .quote .author__4 {
   background-color: #FF075E;
+}
+
+@media (min-width: 768px) {
+  .quote {
+    max-width: 760px;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 32px;
+  }
+  .quotations .quote p {
+    font-size: 20px;
+  }
+  .quotations .quote blockquote {
+    font-size: 26px;
+  }
 }/*# sourceMappingURL=MC.css.map */
