@@ -189,26 +189,30 @@ figure {
 }
 
 .images {
+  width: 100%;
+  align-items: center;
+}
+.images .scroll-images {
   position: relative;
   display: flex;
-  width: 100%;
-  justify-content: center;
   overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
-.images img {
+.images .scroll-images img {
+  cursor: pointer;
   position: relative;
   display: flex;
   width: 161px;
   height: 286px;
   margin: 0 5px;
 }
-.images .img-hidden {
+.images .scroll-images .img-hidden {
   transition: opacity 0.2s ease-in-out;
   opacity: 0;
   bottom: 286px;
 }
-
-.thumbnail:hover {
+.images .thumbnail:hover {
   opacity: 1;
   position: relative;
 }
@@ -443,25 +447,38 @@ p {
     height: 486px;
   }
   .images {
-    position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
-    overflow: hidden;
   }
-  .images img {
+  .images .scroll-images::-webkit-scrollbar {
+    height: 8px;
+  }
+  .images .scroll-images::-webkit-scrollbar-thumb {
+    background-color: #FAB8C4;
+    border-radius: 4px;
+  }
+  .images .scroll-images {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .images .scroll-images img {
     position: relative;
     display: flex;
     width: 274px;
     height: 486px;
     margin: 0 5px;
   }
-  .images .img-hidden {
+  .images .scroll-images .img-hidden {
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
     bottom: 486px;
   }
-  .thumbnail:hover {
+  .images .thumbnail:hover {
     opacity: 1;
     position: relative;
   }
@@ -596,4 +613,11 @@ p {
   .bricks .brick a {
     width: 340px;
   }
+}
+.hello {
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15vw;
+  text-align: center;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

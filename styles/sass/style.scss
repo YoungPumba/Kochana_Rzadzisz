@@ -238,31 +238,38 @@ figure {
     height: 286px;
 }
 
-.images{
-    position: relative;
-    display: flex;
+.images {
     width: 100%;
-    justify-content: center;
-    overflow: hidden;
+    align-items: center;
 
-    img{
+    .scroll-images{
         position: relative;
         display: flex;
-        width: 161px;
-        height: 286px;
-        margin: 0 5px;
+        overflow: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    
+        img{
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            width: 161px;
+            height: 286px;
+            margin: 0 5px;
+        }
+    
+        .img-hidden{
+            transition: opacity 0.2s ease-in-out;
+            opacity: 0;
+            bottom: 286px;
+        }
     }
+    .thumbnail:hover{
+        opacity: 1;
+        position: relative;
+    }
+}
 
-    .img-hidden{
-        transition: opacity 0.2s ease-in-out;
-        opacity: 0;
-        bottom: 286px;
-    }
-}
-.thumbnail:hover{
-    opacity: 1;
-    position: relative;
-}
 
 p{
     font-size: 1.1rem;
@@ -557,31 +564,46 @@ p{
         height: 486px;
     }
     
-    .images{
-        position: relative;
+    .images {
         display: flex;
         width: 100%;
         justify-content: center;
-        overflow: hidden;
-    
-        img{
+
+        .scroll-images::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-images::-webkit-scrollbar-thumb {
+            background-color: #FAB8C4;
+            border-radius: 4px;
+        }
+
+        .scroll-images{
             position: relative;
             display: flex;
-            width: 274px;
-            height: 486px;
-            margin: 0 5px;
+            overflow: hidden;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        
+            img{
+                position: relative;
+                display: flex;
+                width: 274px;
+                height: 486px;
+                margin: 0 5px;
+            }
+        
+            .img-hidden{
+                transition: opacity 0.2s ease-in-out;
+                opacity: 0;
+                bottom: 486px;
+            }
         }
-    
-        .img-hidden{
-            transition: opacity 0.2s ease-in-out;
-            opacity: 0;
-            bottom: 486px;
+        .thumbnail:hover{
+            opacity: 1;
+            position: relative;
         }
-    }
-
-    .thumbnail:hover{
-        opacity: 1;
-        position: relative;
     }
 
     p{
@@ -777,3 +799,15 @@ p{
     // ///////Rządzisz//////// //
     // /////////////////////// //
 }   
+
+// /////////////////////////// //
+// ////////Uniwersalne//////// //
+// /////////////////////////// //
+
+.hello {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15vw;
+    text-align: center;
+    height: 100%;
+}
