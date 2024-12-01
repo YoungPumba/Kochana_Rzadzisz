@@ -1,0 +1,124 @@
+h1, h2 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hello {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15vw;
+    text-align: center;
+    height: 100%;
+}
+
+.creators {
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 30px;
+    margin-bottom: 25px;
+
+    hr {
+        height: 1px;
+        width: 100%;
+        background-color: black;
+        border: none;
+    }
+
+    .container-dropdown-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .menu-dropdown-content {
+            display: flex;
+            flex-direction: row;
+            text-align: left;
+            p {
+                font-size: 16px;
+                margin: 0px 10px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+    
+            label {
+                margin-left: auto;
+                margin-right: 15px;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            margin: 0 20px;
+            
+            ul {
+                list-style:disc;
+                font-family: 'Abhaya Libre', serif;
+                font-size: 12px;
+                text-align: left;
+            }
+        }
+
+        input[type="checkbox"]:checked ~ .dropdown-content {
+            max-height: 200px;
+            padding: 15px;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .creators {
+        padding: 0 60px;
+        .container-dropdown-content {
+            .menu-dropdown-content {
+                p {
+                    font-size: 18px;
+                }
+                h3 {
+                    font-size: 20px;
+                }
+            }
+            .dropdown-content {
+                ul {
+                    li {
+                        font-size: 18px;
+                    }
+                }
+            }
+            input[type="checkbox"]:checked ~ .dropdown-content {
+                max-height: 200px;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+@media(min-width:992px) {
+    .creators {
+        padding: 0 90px;
+        max-width: 1100px;
+        .container-dropdown-content {
+            .menu-dropdown-content {
+                p {
+                    font-size: 18px;
+                }
+                h3 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
