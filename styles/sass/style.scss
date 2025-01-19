@@ -308,7 +308,7 @@ p{
 .business_card{
     display: grid;
     position: relative;
-    margin-top: 60px;
+    margin: 20px 0px 20vw 0px;
 
     h3{
         font-size: 4vw;
@@ -355,66 +355,113 @@ p{
 }
 
 // /////////////////////// //
-// ////////Kafelki//////// //
+// //////Nowe Kafelki///// //
 // /////////////////////// //
+.bricks {
+    display: flex;
+    justify-content:center ;
+}
 
-.bricks{
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-gap: 2vw;
-    margin: 20vw 5px 0px 5px;
+.brick {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
 
-    .brick{
-        display: flex;
-        justify-content: center;
-        line-height: 5vw;
-        margin: 0 auto;
-        width: 46vw;
-        height: 32vw;
-        background-image: url('../assets/STRONA KLAUDII/2.png');
-        background-size: cover;
-
-        a{
-            display: flex;
-            align-items: center;
-            text-align: center;
-            font-family: 'Cinzel', serif;
-            font-weight: bold;
-            font-size: 4.5vw;
-            color: white;
-            text-decoration: none;
-        }
+    h3 {
+        font-weight: bold;
     }
-
-    .banner{
-        grid-column: 1 / span 2;
-
-        img{
-            width: 94vw;
-        }
+    &__1, &__2, &__3, &__4 {
+        border-left: 3px solid;
+        padding-left: 5px;
+        max-width: 300px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    &__1 {
+        margin-left: 5vw;
+    }
+    &__2 {
+        margin-left: 8vw;
+    }
+    &__3 {
+        margin-left: 11vw;
+    }
+    &__4 {
+        margin-left: 14vw;
     }
 }
 
-.footer{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    top: 200px;
+// /////////////////////// //
+// ////////Kafelki//////// //
+// /////////////////////// //
 
-    .logo {
-        top: 0px;
-        margin-bottom: 0px;
-        width: auto;
+// .bricks{
+//     display: grid;
+//     justify-content: center;
+//     text-align: center;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-template-rows: repeat(3, auto);
+//     grid-gap: 2vw;
+//     margin: 20vw 5px 0px 5px;
+
+//     .brick{
+//         display: flex;
+//         justify-content: center;
+//         line-height: 5vw;
+//         margin: 0 auto;
+//         width: 46vw;
+//         height: 32vw;
+//         background-image: url('../assets/STRONA KLAUDII/2.png');
+//         background-size: cover;
+
+//         a{
+//             display: flex;
+//             align-items: center;
+//             text-align: center;
+//             font-family: 'Cinzel', serif;
+//             font-weight: bold;
+//             font-size: 4.5vw;
+//             color: white;
+//             text-decoration: none;
+//         }
+//     }
+
+//     .banner{
+//         grid-column: 1 / span 2;
+
+//         img{
+//             width: 94vw;
+//         }
+//     }
+// }
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color:pink;
+    height: 120px;
+
+    .footer-logo {
+        width: 300px;
+        height: 75px;
+        margin: 5px 0px;
 
         img {
-            width: 300px;
-            height: 75px;
-            margin-right: 0px;
-            left: 0px;
+            width: 100%;
+        }
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 10px 0;
+
+        a {
+            color: black;
+            text-decoration: none;
         }
     }
 }
@@ -464,6 +511,8 @@ p{
     }
 
     .business_card{
+        margin: 20px 0px 6vw 0px;
+
 
         h3{
             width: 70%;
@@ -493,9 +542,9 @@ p{
         }
     }
 
-    .bricks{
-        margin: 10vw 5px 0px 5px;
-    }
+    // .bricks{
+    //     margin: 10vw 5px 0px 5px;
+    // }
     // /////////////////////// //
     // /////////Koniec//////// //
     // ////////Kochana//////// //
@@ -684,24 +733,24 @@ p{
         }
     }
 
-    .footer{
+    footer{
         display: flex;
         position: relative;
         justify-content: center;
-        align-items: center;
-        top: 250px;
+        height: 150px;
 
-        .logo {
-            top: 0px;
-            margin-bottom: 0px;
+        .footer-logo {
             width: auto;
+            margin: 10px 0;
 
             img {
                 width: 380px;
                 height: 95px;
-                margin-right: 0px;
-                left: 0px;
             }
+        }
+
+        .footer-info {
+            margin-top: 30px;
         }
     }
     // /////////////////////// //

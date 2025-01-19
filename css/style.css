@@ -248,7 +248,7 @@ p {
 .business_card {
   display: grid;
   position: relative;
-  margin-top: 60px;
+  margin: 20px 0px 20vw 0px;
 }
 .business_card h3 {
   font-size: 4vw;
@@ -289,58 +289,63 @@ p {
 }
 
 .bricks {
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 2vw;
-  margin: 20vw 5px 0px 5px;
-}
-.bricks .brick {
   display: flex;
   justify-content: center;
-  line-height: 5vw;
-  margin: 0 auto;
-  width: 46vw;
-  height: 32vw;
-  background-image: url("../assets/STRONA KLAUDII/2.png");
-  background-size: cover;
-}
-.bricks .brick a {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-family: "Cinzel", serif;
-  font-weight: bold;
-  font-size: 4.5vw;
-  color: white;
-  text-decoration: none;
-}
-.bricks .banner {
-  grid-column: 1/span 2;
-}
-.bricks .banner img {
-  width: 94vw;
 }
 
-.footer {
+.brick {
   display: flex;
-  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.brick h3 {
+  font-weight: bold;
+}
+.brick__1, .brick__2, .brick__3, .brick__4 {
+  border-left: 3px solid;
+  padding-left: 5px;
+  max-width: 300px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.brick__1 {
+  margin-left: 5vw;
+}
+.brick__2 {
+  margin-left: 8vw;
+}
+.brick__3 {
+  margin-left: 11vw;
+}
+.brick__4 {
+  margin-left: 14vw;
+}
+
+footer {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  top: 200px;
+  margin-top: 20px;
+  background-color: pink;
+  height: 120px;
 }
-.footer .logo {
-  top: 0px;
-  margin-bottom: 0px;
-  width: auto;
-}
-.footer .logo img {
+footer .footer-logo {
   width: 300px;
   height: 75px;
-  margin-right: 0px;
-  left: 0px;
+  margin: 5px 0px;
+}
+footer .footer-logo img {
+  width: 100%;
+}
+footer .footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+footer .footer-info a {
+  color: black;
+  text-decoration: none;
 }
 
 .remont {
@@ -374,6 +379,9 @@ p {
     width: 406px;
     height: 101px;
   }
+  .business_card {
+    margin: 20px 0px 6vw 0px;
+  }
   .business_card h3 {
     width: 70%;
     font-size: 3vw;
@@ -396,9 +404,6 @@ p {
     content: url("../assets/STRONA KLAUDII/background.png");
     position: absolute;
     width: 100%;
-  }
-  .bricks {
-    margin: 10vw 5px 0px 5px;
   }
 }
 @media (min-width: 992px) {
@@ -543,23 +548,22 @@ p {
   .bricks .banner img {
     max-width: 1400px;
   }
-  .footer {
+  footer {
     display: flex;
     position: relative;
     justify-content: center;
-    align-items: center;
-    top: 250px;
+    height: 150px;
   }
-  .footer .logo {
-    top: 0px;
-    margin-bottom: 0px;
+  footer .footer-logo {
     width: auto;
+    margin: 10px 0;
   }
-  .footer .logo img {
+  footer .footer-logo img {
     width: 380px;
     height: 95px;
-    margin-right: 0px;
-    left: 0px;
+  }
+  footer .footer-info {
+    margin-top: 30px;
   }
 }
 @media (min-width: 1170px) {
