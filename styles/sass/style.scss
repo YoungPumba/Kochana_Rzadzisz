@@ -283,8 +283,8 @@ p{
     &__btn{
         width: 147px;
         height: 33px;
-        font-family: 'Abhaya Libre', serif;;
-        font-size: 1.1rem;
+        font-family: 'Cinzel', serif;;
+        font-size: 1rem;
         border-radius: 12px;
         border: none;
         background-color: #FF31A6
@@ -298,6 +298,44 @@ p{
     a{
         color: white;
         text-decoration: none;
+    }
+}
+
+.mini-rocket {
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    h2 {
+        text-decoration: none;
+        line-height: 100%;
+        font-size: 1.1rem;
+    }
+    .item {
+        width: 144px;
+        height: 240px;
+
+        a {
+            text-decoration: none;
+        }
+        .leaflet {
+            height: 144px;
+            border: 1px solid black;
+            box-shadow: 0px 8px 8px -6px rgba(66, 68, 90, 1);
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        h2 {
+            margin: 6px 0;
+            color: #000;
+        }
+        p {
+            font-family: 'Abhaya Libre', serif;
+            font-weight: normal;
+            font-size: 0.9rem;
+            color: #737373;
+        }
     }
 }
 
@@ -328,8 +366,8 @@ p{
 
     &__btn{
         position: relative;
-        font-family: 'Abhaya Libre', serif;;
-        font-size: 3.6vw;
+        font-family: 'Cinzel', serif;;
+        font-size: 3.1vw;
         height: 7vw;
         width: 57vw;
         border-radius: 5vw;
@@ -367,29 +405,44 @@ p{
     flex-direction: column;
     align-items:flex-start;
 
+    a {
+        text-decoration: none;
+    }
+
     h3 {
+        color: #000;
         font-weight: bold;
+        font-size: 16px;
+    }
+    p {
+        color: #737373;
     }
     &__1, &__2, &__3, &__4 {
         border-left: 3px solid;
+        border-radius: 0 20px 20px 0 ;
         padding-left: 5px;
         max-width: 300px;
         cursor: pointer;
         margin-top: 10px;
         margin-bottom: 10px;
-    }
-    &__1 {
         margin-left: 5vw;
+        transition: background-color 0.5s ease;
     }
-    &__2 {
-        margin-left: 8vw;
+    &__1:hover, &__2:hover, &__3:hover, &__4:hover {
+        background-color: rgba(255, 180, 193, 0.445);
     }
-    &__3 {
-        margin-left: 11vw;
-    }
-    &__4 {
-        margin-left: 14vw;
-    }
+    // &__1 {
+    //     margin-left: 5vw;
+    // }
+    // &__2 {
+    //     margin-left: 8vw;
+    // }
+    // &__3 {
+    //     margin-left: 11vw;
+    // }
+    // &__4 {
+    //     margin-left: 14vw;
+    // }
 }
 
 // /////////////////////// //
@@ -435,6 +488,29 @@ p{
 //         }
 //     }
 // }
+
+.insta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px; 
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+
+    &__content {
+        transition: opacity 0.3s ease;
+        img {
+            width: 100%;
+            height: 215px;
+            object-fit: cover;
+        }
+    }
+
+    &__content:hover {
+        opacity: 0.8;
+    }
+}
 
 footer{
     display: flex;
@@ -510,6 +586,18 @@ footer{
         }
     }
 
+    .mini-rocket {
+        flex-direction: row;
+        .item {
+            margin: 0 20px;
+            transition: background-color 0.3s ease;
+            border-radius: 0px 0 10px 10px;
+        }
+        .item:hover {
+            background-color: rgba(255, 180, 193, 0.445)
+        }
+    }
+
     .business_card{
         margin: 20px 0px 6vw 0px;
 
@@ -545,6 +633,16 @@ footer{
     // .bricks{
     //     margin: 10vw 5px 0px 5px;
     // }
+
+    .insta {
+        height: 550px;
+
+        &__content {
+            img {
+                height: 260px;
+            }
+        }
+    }
     // /////////////////////// //
     // /////////Koniec//////// //
     // ////////Kochana//////// //
@@ -662,7 +760,7 @@ footer{
     .inspiration{
 
         &__btn{
-            width: 200px;
+            width: 220px;
             height: 45px;
             font-size: 1.6rem;
         }
@@ -670,6 +768,27 @@ footer{
         p{
             width: auto;
             margin-bottom: 20px;
+        }
+    }
+
+    .mini-rocket {
+
+        .item {
+            height: 380px;
+            width: 200px;
+            margin: 0 60px;
+            .leaflet {
+                height: 200px;
+            }
+    
+            .description {
+                h2 {
+                    font-size: 1.6rem;
+                }
+                p {
+                    font-size: 1.6rem;
+                }
+            }
         }
     }
 
@@ -708,27 +827,76 @@ footer{
         height: 544.05px;
     }
 
-    .bricks{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 6vw;
+    .bricks {
+        margin: 40px 10px;
+    }
 
-        .brick{
-            line-height: normal;
-            width: 265px;
-            height: 189px;
+    .brick {
+        flex-direction: row;
 
-            a{
-                justify-content: center;
-                font-size: 1.6rem;
-            }
+        h3 {
+            font-size: 1.6rem;
         }
 
-        .banner{
-            grid-column: 1 / span 2;
+        p {
+            color: #737373;
+        }
+
+        &__1, &__2, &__3, &__4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-left: 0;
+            margin-bottom: 0;
+            width: 100%;
+            max-width: 100%;
+            height: 260px;
+            margin: 0 5px;
+        }
+        &__2 {
+            margin-top: 50px;
+        }
+        &__3 {
+            margin-top: 100px;
+        }
+        &__4 {
+            margin-top: 150px;
+        }
+    }
+
+    // .bricks{
+    //     grid-template-columns: repeat(2, 1fr);
+    //     grid-template-rows: repeat(3, auto);
+    //     grid-gap: 6vw;
+
+    //     .brick{
+    //         line-height: normal;
+    //         width: 265px;
+    //         height: 189px;
+
+    //         a{
+    //             justify-content: center;
+    //             font-size: 1.6rem;
+    //         }
+    //     }
+
+    //     .banner{
+    //         grid-column: 1 / span 2;
     
-            img{
-                max-width: 1400px;
+    //         img{
+    //             max-width: 1400px;
+    //         }
+    //     }
+    // }
+
+    .insta {
+        grid-template-columns: repeat(5, 1fr);
+        height: 550px;
+
+        &__content {
+            img {
+                height: 265px;
             }
         }
     }
@@ -786,18 +954,32 @@ footer{
         height: 641.67px;
     }
 
-    .bricks{
+    .brisks {
+        width: 100%;
+        margin: 0;
+    }
 
-        .brick{
-            width: 298px;
-            height: 213px;
-
-            a{
-                width: 298px;
-                padding: 12% 12%;
-            }
+    .brick {
+        &__1, &__2, &__3, &__4 {
+            height: 200px;
+            width: 100%;
+            margin-left: 10px;
+            margin-right: 10px;
         }
     }
+
+    // .bricks{
+
+    //     .brick{
+    //         width: 298px;
+    //         height: 213px;
+
+    //         a{
+    //             width: 298px;
+    //             padding: 12% 12%;
+    //         }
+    //     }
+    // }
     // /////////////////////// //
     // /////////Koniec//////// //
     // ////////Kochana//////// //
@@ -831,17 +1013,17 @@ footer{
     .business_background{
         height: 767.81px;
     }
-    .bricks{
+    // .bricks{
 
-        .brick{
-            width: 340px;
-            height: 243px;
+    //     .brick{
+    //         width: 340px;
+    //         height: 243px;
 
-            a{
-                width: 340px;
-            }
-        }
-    }
+    //         a{
+    //             width: 340px;
+    //         }
+    //     }
+    // }
     // /////////////////////// //
     // /////////Koniec//////// //
     // ////////Kochana//////// //

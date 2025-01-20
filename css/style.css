@@ -229,8 +229,8 @@ p {
 .inspiration__btn {
   width: 147px;
   height: 33px;
-  font-family: "Abhaya Libre", serif;
-  font-size: 1.1rem;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
   border-radius: 12px;
   border: none;
   background-color: #FF31A6;
@@ -243,6 +243,43 @@ p {
 .inspiration a {
   color: white;
   text-decoration: none;
+}
+
+.mini-rocket {
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+.mini-rocket h2 {
+  text-decoration: none;
+  line-height: 100%;
+  font-size: 1.1rem;
+}
+.mini-rocket .item {
+  width: 144px;
+  height: 240px;
+}
+.mini-rocket .item a {
+  text-decoration: none;
+}
+.mini-rocket .item .leaflet {
+  height: 144px;
+  border: 1px solid black;
+  box-shadow: 0px 8px 8px -6px rgb(66, 68, 90);
+  overflow: hidden;
+}
+.mini-rocket .item .leaflet img {
+  width: 100%;
+}
+.mini-rocket .item h2 {
+  margin: 6px 0;
+  color: #000;
+}
+.mini-rocket .item p {
+  font-family: "Abhaya Libre", serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #737373;
 }
 
 .business_card {
@@ -265,8 +302,8 @@ p {
 }
 .business_card__btn {
   position: relative;
-  font-family: "Abhaya Libre", serif;
-  font-size: 3.6vw;
+  font-family: "Cinzel", serif;
+  font-size: 3.1vw;
   height: 7vw;
   width: 57vw;
   border-radius: 5vw;
@@ -298,28 +335,52 @@ p {
   flex-direction: column;
   align-items: flex-start;
 }
+.brick a {
+  text-decoration: none;
+}
 .brick h3 {
+  color: #000;
   font-weight: bold;
+  font-size: 16px;
+}
+.brick p {
+  color: #737373;
 }
 .brick__1, .brick__2, .brick__3, .brick__4 {
   border-left: 3px solid;
+  border-radius: 0 20px 20px 0;
   padding-left: 5px;
   max-width: 300px;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-.brick__1 {
   margin-left: 5vw;
+  transition: background-color 0.5s ease;
 }
-.brick__2 {
-  margin-left: 8vw;
+.brick__1:hover, .brick__2:hover, .brick__3:hover, .brick__4:hover {
+  background-color: rgba(255, 180, 193, 0.445);
 }
-.brick__3 {
-  margin-left: 11vw;
+
+.insta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: 450px;
+  width: 100%;
+  overflow: hidden;
 }
-.brick__4 {
-  margin-left: 14vw;
+.insta__content {
+  transition: opacity 0.3s ease;
+}
+.insta__content img {
+  width: 100%;
+  height: 215px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.insta__content:hover {
+  opacity: 0.8;
 }
 
 footer {
@@ -379,6 +440,17 @@ footer .footer-info a {
     width: 406px;
     height: 101px;
   }
+  .mini-rocket {
+    flex-direction: row;
+  }
+  .mini-rocket .item {
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 0px 0 10px 10px;
+  }
+  .mini-rocket .item:hover {
+    background-color: rgba(255, 180, 193, 0.445);
+  }
   .business_card {
     margin: 20px 0px 6vw 0px;
   }
@@ -404,6 +476,12 @@ footer .footer-info a {
     content: url("../assets/STRONA KLAUDII/background.png");
     position: absolute;
     width: 100%;
+  }
+  .insta {
+    height: 550px;
+  }
+  .insta__content img {
+    height: 260px;
   }
 }
 @media (min-width: 992px) {
@@ -491,13 +569,27 @@ footer .footer-info a {
     font-size: 1.6rem;
   }
   .inspiration__btn {
-    width: 200px;
+    width: 220px;
     height: 45px;
     font-size: 1.6rem;
   }
   .inspiration p {
     width: auto;
     margin-bottom: 20px;
+  }
+  .mini-rocket .item {
+    height: 380px;
+    width: 200px;
+    margin: 0 60px;
+  }
+  .mini-rocket .item .leaflet {
+    height: 200px;
+  }
+  .mini-rocket .item .description h2 {
+    font-size: 1.6rem;
+  }
+  .mini-rocket .item .description p {
+    font-size: 1.6rem;
   }
   .business_card {
     max-width: 992px;
@@ -529,24 +621,44 @@ footer .footer-info a {
     height: 544.05px;
   }
   .bricks {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-gap: 6vw;
+    margin: 40px 10px;
   }
-  .bricks .brick {
-    line-height: normal;
-    width: 265px;
-    height: 189px;
+  .brick {
+    flex-direction: row;
   }
-  .bricks .brick a {
-    justify-content: center;
+  .brick h3 {
     font-size: 1.6rem;
   }
-  .bricks .banner {
-    grid-column: 1/span 2;
+  .brick p {
+    color: #737373;
   }
-  .bricks .banner img {
-    max-width: 1400px;
+  .brick__1, .brick__2, .brick__3, .brick__4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+    margin: 0 5px;
+  }
+  .brick__2 {
+    margin-top: 50px;
+  }
+  .brick__3 {
+    margin-top: 100px;
+  }
+  .brick__4 {
+    margin-top: 150px;
+  }
+  .insta {
+    grid-template-columns: repeat(5, 1fr);
+    height: 550px;
+  }
+  .insta__content img {
+    height: 265px;
   }
   footer {
     display: flex;
@@ -583,13 +695,15 @@ footer .footer-info a {
   .business_background {
     height: 641.67px;
   }
-  .bricks .brick {
-    width: 298px;
-    height: 213px;
+  .brisks {
+    width: 100%;
+    margin: 0;
   }
-  .bricks .brick a {
-    width: 298px;
-    padding: 12% 12%;
+  .brick__1, .brick__2, .brick__3, .brick__4 {
+    height: 200px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 @media (min-width: 1400px) {
@@ -609,13 +723,6 @@ footer .footer-info a {
   }
   .business_background {
     height: 767.81px;
-  }
-  .bricks .brick {
-    width: 340px;
-    height: 243px;
-  }
-  .bricks .brick a {
-    width: 340px;
   }
 }
 .hello {
