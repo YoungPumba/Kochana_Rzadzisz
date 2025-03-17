@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h2 :not(header) {
   margin: 0;
   font-family: "Cinzel", serif;
   font-weight: bold;
