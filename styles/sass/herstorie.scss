@@ -6,3 +6,48 @@ h1 {
     width: 100%;
     margin-bottom: 10px;
 }
+
+.personality {
+    flex-direction: column;
+    &__item {
+        margin: 40px 0;
+        .portrait{
+            justify-content: left;
+            align-items: center;
+            padding: 0 20px;
+            img {
+                height: 80px;
+                border: solid 1px black;
+                border-radius: 50%;
+                background-color: #F9F5F2;
+                margin-right: 10px;
+            }
+        }
+        &__content {
+            margin: 20px;
+        }
+    }
+}
+
+@media(min-width:992px) {
+    h1 {
+        font-size: 35px;
+    }
+    h6 {
+        font-size: 26px;
+    }
+
+    .personality {
+        flex-direction: unset;
+        &__item {
+            width: 50%;
+            margin: 40px 10px;
+
+            .portrait {
+                img {
+                    height: 110px;
+                }
+            }
+        }
+    }
+}
