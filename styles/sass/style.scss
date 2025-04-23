@@ -400,7 +400,7 @@ p{
 .bricks {
     display: flex;
     justify-content:center ;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .brick {
@@ -673,17 +673,19 @@ footer{
         h2 {
             cursor: pointer;
             position: relative;
+            z-index: 0;
         }
 
         h2::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 6px;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 7px;
             background-color: white;
             transition: width 0.3s ease-in-out;
+            z-index: -1;
         }
 
         h2:hover::after {
@@ -711,6 +713,7 @@ footer{
             display: flex;
             justify-content:space-around;
             width: 100%;
+            z-index: 0;
             
             a {
                 text-decoration: none;
@@ -720,12 +723,13 @@ footer{
             a::after {
                 content: '';
                 position: absolute;
-                bottom: 0;
+                bottom: 6px;
                 left: 0;
                 width: 0;
-                height: 2px;
+                height: 7px;
                 background-color: white;
                 transition: width 0.3s ease-in-out;
+                z-index: -1;
             }
 
             a:hover::after {
@@ -750,6 +754,14 @@ footer{
                     a {
                         color: #000;
                         position: relative;
+                    }
+
+                    a::after {
+                        background-color: none;
+                    }
+
+                    a:hover::after {
+                        width: 0;
                     }
                 }
             }

@@ -18,7 +18,7 @@ h1 {
 }
 .download .item {
   width: 144px;
-  height: 288px;
+  height: 317px;
 }
 .download .item .leaflet {
   height: 144px;
@@ -41,6 +41,7 @@ h1 {
   cursor: pointer;
   border-radius: 15px;
   background-color: #F9F5F2;
+  color: black;
 }
 .download .item a button p {
   font-family: "Cinzel", serif;

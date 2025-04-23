@@ -330,7 +330,7 @@ p {
 .bricks {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .brick {
@@ -503,16 +503,18 @@ footer .footer-info a {
   .but-desktop h2 {
     cursor: pointer;
     position: relative;
+    z-index: 0;
   }
   .but-desktop h2::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 7px;
     background-color: white;
     transition: width 0.3s ease-in-out;
+    z-index: -1;
   }
   .but-desktop h2:hover::after {
     width: 100%;
@@ -536,6 +538,7 @@ footer .footer-info a {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    z-index: 0;
   }
   .navbar-desktop__link a {
     text-decoration: none;
@@ -544,12 +547,13 @@ footer .footer-info a {
   .navbar-desktop__link a::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 7px;
     background-color: white;
     transition: width 0.3s ease-in-out;
+    z-index: -1;
   }
   .navbar-desktop__link a:hover::after {
     width: 100%;
@@ -574,6 +578,12 @@ footer .footer-info a {
   .navbar-desktop__links-mini ul li a {
     color: #000;
     position: relative;
+  }
+  .navbar-desktop__links-mini ul li a::after {
+    background-color: none;
+  }
+  .navbar-desktop__links-mini ul li a:hover::after {
+    width: 0;
   }
   .navbar-desktop__links-mini.show {
     max-height: 200px;
