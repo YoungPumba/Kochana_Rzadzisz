@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Cinzel:wght@400;700;900&display=swap');
 
 body{
-    background-color: pink;
+    background-color: #FAB8C4;
 }
 
 .logo{
@@ -14,11 +14,6 @@ h1{
     width: 100%;
     height: 100%;
     margin: 0;
-}
-
-p{
-    text-align: center;
-    margin: 0 24px;
 }
 
 ul{
@@ -39,6 +34,11 @@ ul{
     border: 2px #FF31A6 solid;
     background-color: #F9F5F2;
     box-shadow: 0px 11px 10px -10px rgba(66, 68, 90, 1);
+
+    p{
+        text-align: center;
+        margin: 0 24px;
+    }
 }
 
 .project-desktop{
@@ -91,6 +91,11 @@ ul{
             li{
                 font-size: 1.6rem;
             }
+        }
+
+        p{
+            text-align: center;
+            margin: 0 24px;
         }
     }
 

@@ -454,6 +454,7 @@ p {
   position: relative;
   max-height: 1337px;
   width: 100%;
+  margin-top: 60px;
 }
 .opinions_card-mobile img {
   width: 100%;
