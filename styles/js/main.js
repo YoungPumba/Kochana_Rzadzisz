@@ -59,3 +59,7 @@ if (window.matchMedia('(max-width: 991px)').matches) {
         });
     });
 }
+
+function openPDF(linkDoPDF) {
+    window.open(linkDoPDF, '_blank');
+  }

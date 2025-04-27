@@ -37,13 +37,14 @@ h1 {
   font-weight: normal;
   font-size: 12px;
 }
-.download .item a button {
+.download .item button {
   cursor: pointer;
   border-radius: 15px;
+  border-color: black;
   background-color: #F9F5F2;
   color: black;
 }
-.download .item a button p {
+.download .item button p {
   font-family: "Cinzel", serif;
   font-weight: bold;
   font-size: 13px;
