@@ -272,14 +272,14 @@ p {
   display: flex;
   z-index: -1;
   width: 100%;
-  height: 300px;
+  height: 320px;
   align-items: end;
 }
 
 .rocket-background {
   background-color: #FAB8C4;
   width: 100%;
-  height: 200px;
+  height: 210px;
 }
 
 .mini-rocket {
@@ -299,7 +299,7 @@ p {
 }
 .mini-rocket .item {
   width: 144px;
-  height: 260px;
+  height: 280px;
   margin: 0 20px;
 }
 .mini-rocket .item a {
